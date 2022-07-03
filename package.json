@@ -7,7 +7,7 @@
     "linter": "npx eslint . --fix",
     "start-dev": "nodemon --config \"./util/nodemon.json\"/",
     "build": "rm -rf ./dist && tsc",
-    "start": "nodemon --config \"./util/nodemon.json\"/"
+    "start": "node dist/main.js"
   },
   "dependencies": {
     "@epnsproject/backend-sdk": "^2.0.0",
