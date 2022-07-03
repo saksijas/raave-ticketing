@@ -26,11 +26,11 @@
     "graphql-request": "^4.2.0",
     "mongoose": "^6.4.2",
     "node-schedule": "^2.1.0",
+    "nodemon": "^2.0.16",
     "reflect-metadata": "^0.1.13",
     "ts-node": "^10.8.0",
     "type-graphql": "^1.1.1",
-    "typescript": "^4.6.4",
-    "nodemon": "^2.0.16"
+    "typescript": "^4.6.4"
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
