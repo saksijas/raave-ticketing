@@ -7,7 +7,7 @@
     "linter": "npx eslint . --fix",
     "start-dev": "nodemon --config \"./util/nodemon.json\"/",
     "build": "rm -rf ./dist && tsc",
-    "start": "node dist/main.js"
+    "start": "nodemon --config \"./util/nodemon.json\"/"
   },
   "dependencies": {
     "@epnsproject/backend-sdk": "^2.0.0",
@@ -29,7 +29,8 @@
     "reflect-metadata": "^0.1.13",
     "ts-node": "^10.8.0",
     "type-graphql": "^1.1.1",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "nodemon": "^2.0.16"
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
