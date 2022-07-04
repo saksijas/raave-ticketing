@@ -42,7 +42,7 @@ export const web3Test = async () =>{
         const metadata = await readMetadata(evt.args.contentURI);
         let body = metadata.content;
         let type = "3";
-        let title = "Letsraave.lens just posted";
+        let title = "just posted";
         let amsg = metadata.content;
         let subject = metadata.content;
         let img = "https://pbs.twimg.com/profile_images/1541910462442389505/3Of0pIC8_400x400.jpg";
