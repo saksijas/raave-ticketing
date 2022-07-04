@@ -44,7 +44,7 @@ export const web3Test = async () =>{
         let type = "3";
         let title = "Letsraave.lens just posted";
         let amsg = metadata.content;
-        let subject = "New post";
+        let subject = metadata.content;
         let img = "https://pbs.twimg.com/profile_images/1541910462442389505/3Of0pIC8_400x400.jpg";
         let cta = "https://lenster.xyz/u/letsraave.lens";
         // send a notification to your subscribers
