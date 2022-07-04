@@ -20,7 +20,7 @@ schedule.scheduleJob("*/30 * * * * *", async() => {
   await web3Test();
 });
 
-schedule.scheduleJob("*/* 5 * * * *", async() => {
+schedule.scheduleJob("*/30 * * * *", async() => {
   await updateLastBlock();
 });
 
