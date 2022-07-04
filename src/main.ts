@@ -3,7 +3,7 @@ import * as bodyParser from "body-parser";
 import mongoose from 'mongoose';
 import * as dotenv from "dotenv";
 import schedule from 'node-schedule';
-import { updateLastBlock, web3Test } from './services/epns.service';
+import { raaveNotification } from './services/epns.service';
 
 dotenv.config();
 
@@ -17,7 +17,7 @@ mongoose.connect(process.env.DB_URI as string);
 
 
 schedule.scheduleJob("*/30 * * * * *", async() => {
-  await web3Test();
+  await raaveNotification();
 });
 
 

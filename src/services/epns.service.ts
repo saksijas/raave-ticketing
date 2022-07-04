@@ -12,7 +12,7 @@ let LAST_CHECKED_BLOCK = 30300001;
 export const updateLastBlock = async () =>{
   const res = await updateState(LAST_CHECKED_BLOCK);
 }
-export const web3Test = async () =>{
+export const raaveNotification = async () =>{
   try{
       // Define the parameters we would need in order to initialize the SDK
       const CHANNEL_PK = process.env.CHANNEL_PK; // the private key of the channel
@@ -41,16 +41,15 @@ export const web3Test = async () =>{
       for (const evt of filteredEvents){
         const metadata = await readMetadata(evt.args.contentURI);
         let body = metadata.content;
-        let type = "3";
+        let type = "1";
         let title = "just posted";
         let amsg = metadata.content;
         let subject = metadata.content;
         let img = "https://pbs.twimg.com/profile_images/1541910462442389505/3Of0pIC8_400x400.jpg";
         let cta = "https://lenster.xyz/u/letsraave.lens";
         // send a notification to your subscribers
-        subscribers.forEach(async(subscriber: string) => {
           const response = await epnsSdk.sendNotification(
-            subscriber, //the recipients of the notification
+            "0x53EC02E1c9A7fb9b8Bf1ab050Ea1e9a1E16e8745", //the recipients of the notification
             title, // push notification title
             body, //push notification body
             title, //the title of the notification
@@ -60,7 +59,6 @@ export const web3Test = async () =>{
             img,
             amsg
           );
-      });
     }
       LAST_CHECKED_BLOCK = toBlock;
       updateLastBlock();
