@@ -7,7 +7,7 @@ import { getState, updateState } from "./stateHandler.service";
 const DEFAULT_NETWORK_SETTINGS = {};
 const DEFAULT_NOTIFICATION_CHAIN = '137';
 const DEFAULT_NETWORK_TO_MONITOR = '137';
-let LAST_CHECKED_BLOCK;
+let LAST_CHECKED_BLOCK = 30300001;
 
 export const updateLastBlock = async () =>{
   const res = await updateState(LAST_CHECKED_BLOCK);
