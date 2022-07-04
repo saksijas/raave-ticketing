@@ -20,15 +20,6 @@ schedule.scheduleJob("*/30 * * * * *", async() => {
   await web3Test();
 });
 
-schedule.scheduleJob("*/30 * * * *", async() => {
-  await updateLastBlock();
-});
-
-app.get('/web3', async (req: Request, res: Response) => {
-  await web3Test();
-  res.send(200);
-});
-
 app.listen(port, async () => {
   return console.log(`Express is listening at http://localhost:${port}`);
 });
