@@ -49,7 +49,7 @@ export const raaveNotification = async () =>{
         let cta = "https://lenster.xyz/u/letsraave.lens";
         // send a notification to your subscribers
           const response = await epnsSdk.sendNotification(
-            "0x53EC02E1c9A7fb9b8Bf1ab050Ea1e9a1E16e8745", //the recipients of the notification
+            subscribers, //the recipients of the notification
             title, // push notification title
             body, //push notification body
             title, //the title of the notification
